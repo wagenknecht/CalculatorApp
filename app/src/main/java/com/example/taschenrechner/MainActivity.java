@@ -106,12 +106,37 @@ public class MainActivity extends AppCompatActivity {
         solution.setText("");
     }
 
+    public void onClickBtnBack(View view) {
+        TextView solution = findViewById(R.id.textSolution);
+        TextView calculation = findViewById(R.id.textCalculation);
+        if(calculation.length() < 1){
+           solution.setText("");
+        } else {
+           calculation.setText(calculation.getText().toString().substring(0, calculation.length() - 1));
+           if(calculation.length() > 0){
+               calculate(view);
+           } else {
+              solution.setText("");
+           }
+        }
+    }
+
+    public void onClickBtnC(View view) {
+        TextView solution = findViewById(R.id.textSolution);
+        TextView calculation = findViewById(R.id.textCalculation);
+        solution.setText("");
+        calculation.setText("");
+    }
+
     public void calculate(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
         Expression e = new ExpressionBuilder(calculation.getText().toString()).build();
         TextView solution = findViewById(R.id.textSolution);
-        double result = e.evaluate();
-        solution.setText(Double.toString(result));
+        try {
+            double result = e.evaluate();
+            solution.setText(Double.toString(result));
+        } catch (Exception ae){solution.setText("Nicht ausführbare Rechnung");}
+
     }
 
 }
