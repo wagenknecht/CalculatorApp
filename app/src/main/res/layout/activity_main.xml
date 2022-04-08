@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onClickBtnC"
-        android:text="("
+        android:text="C"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/buttonbracketRight"
         app:layout_constraintHorizontal_bias="0.5"
@@ -24,38 +24,12 @@
         android:id="@+id/buttonbracketRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClickBtnC"
-        android:text=")"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonbracketLeft"
-        app:layout_constraintEnd_toStartOf="@+id/buttonC"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonbracketLeft"
-        app:layout_constraintTop_toTopOf="@+id/buttonbracketLeft"
-        app:layout_constraintVertical_weight="1" />
-
-    <Button
-        android:id="@+id/buttonC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClickBtnC"
-        android:text="C"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonbracketLeft"
-        app:layout_constraintEnd_toStartOf="@+id/buttonCE"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonbracketRight"
-        app:layout_constraintTop_toTopOf="@+id/buttonbracketLeft"
-        app:layout_constraintVertical_weight="1" />
-
-    <Button
-        android:id="@+id/buttonCE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:onClick="onClickBtnCE"
         android:text="CE"
         app:layout_constraintBottom_toBottomOf="@+id/buttonbracketLeft"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonC"
+        app:layout_constraintStart_toEndOf="@+id/buttonbracketLeft"
         app:layout_constraintTop_toTopOf="@+id/buttonbracketLeft"
         app:layout_constraintVertical_weight="1" />
 
@@ -73,11 +47,11 @@
         app:layout_constraintTop_toTopOf="@+id/button1" />
 
     <Button
-        android:id="@+id/buttonBack"
+        android:id="@+id/buttonComma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClickBtnBack"
-        android:text="Back"
+        android:onClick="onClickBtnComma"
+        android:text="."
         app:layout_constraintBottom_toBottomOf="@+id/button0"
         app:layout_constraintEnd_toStartOf="@+id/buttonSolve"
         app:layout_constraintHorizontal_bias="0.5"
@@ -245,7 +219,7 @@
         android:onClick="onClickBtn0"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonBack"
+        app:layout_constraintEnd_toStartOf="@+id/buttonComma"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
@@ -259,7 +233,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/button0"
         app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonBack"
+        app:layout_constraintStart_toEndOf="@+id/buttonComma"
         app:layout_constraintTop_toTopOf="@+id/button0" />
 
     <Button

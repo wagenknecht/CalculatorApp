@@ -99,6 +99,11 @@ public class MainActivity extends AppCompatActivity {
         calculation.setText(calculation.getText()+"/");
     }
 
+    public void onClickBtnComma(View view) {
+        TextView calculation = findViewById(R.id.textCalculation);
+        calculation.setText(calculation.getText()+".");
+    }
+
     public void onClickBtnSolve(View view) {
         TextView solution = findViewById(R.id.textSolution);
         TextView calculation = findViewById(R.id.textCalculation);
@@ -106,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         solution.setText("");
     }
 
-    public void onClickBtnBack(View view) {
+    public void onClickBtnCE(View view) {
         TextView solution = findViewById(R.id.textSolution);
         TextView calculation = findViewById(R.id.textCalculation);
         if(calculation.length() < 1){
