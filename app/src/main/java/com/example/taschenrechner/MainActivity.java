@@ -3,6 +3,7 @@ package com.example.taschenrechner;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,6 +18,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView calculation = findViewById(R.id.textCalculation);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu){
+        getMenuInflater().inflate(R.menu.more_operations, menu);
+        return true;
     }
 
     public void onClickBtn0(View view) {
@@ -139,9 +146,13 @@ public class MainActivity extends AppCompatActivity {
         TextView solution = findViewById(R.id.textSolution);
         try {
             double result = e.evaluate();
-            solution.setText(Double.toString(result));
-        } catch (Exception ae){solution.setText("Nicht ausführbare Rechnung");}
-
+            String resultString = Double.toString(result);
+            if(resultString.split("\\.")[1].equals("0")){
+                solution.setText(resultString.split("\\.")[0]);
+            } else {
+                solution.setText(resultString);
+            }
+        } catch (Exception ae){solution.setText("Error");}
     }
 
 }

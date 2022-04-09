@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_more"
+        android:title="Weitere">
+        <menu>
+            <item android:id="@+id/sinus"
+                android:title="Sinus">
+            </item>
+            <item android:id="@+id/cosinus"
+                android:title="Kosinus">
+            </item>
+            <item android:id="@+id/tangens"
+                android:title="Tangens">
+            </item>
+            <item android:id="@+id/squareroot"
+                android:title="Quadratwurzel">
+            </item>
+        </menu>
+    </item>
+</menu>
