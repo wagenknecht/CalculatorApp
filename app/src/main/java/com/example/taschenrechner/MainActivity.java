@@ -45,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(menuItem);
-
-
         }
     }
 
@@ -60,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         TextView calculation = findViewById(R.id.textCalculation);
         calculation.setText(calculation.getText()+"1");
         calculate(view);
-
     }
 
     public void onClickBtn2(View view) {
@@ -139,7 +136,12 @@ public class MainActivity extends AppCompatActivity {
     public void onClickBtnSolve(View view) {
         TextView solution = findViewById(R.id.textSolution);
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(solution.getText());
+        //Verhindert, dass Error-Message in Calculation landet
+        if(solution.getText().toString().equals("Error")) {
+            calculation.setText("");
+        } else {
+            calculation.setText(solution.getText());
+        }
         solution.setText("");
     }
 
@@ -163,6 +165,26 @@ public class MainActivity extends AppCompatActivity {
         TextView calculation = findViewById(R.id.textCalculation);
         solution.setText("");
         calculation.setText("");
+    }
+
+    public void onClickBtnSinus(View view) {
+        TextView calculation = findViewById(R.id.textCalculation);
+        calculation.setText(calculation.getText()+"sin");
+    }
+
+    public void onClickBtnCosinus(View view) {
+        TextView calculation = findViewById(R.id.textCalculation);
+        calculation.setText(calculation.getText()+"cos");
+    }
+
+    public void onClickBtnTangent(View view) {
+        TextView calculation = findViewById(R.id.textCalculation);
+        calculation.setText(calculation.getText()+"tan");
+    }
+
+    public void onClickBtnSquareroot(View view) {
+        TextView calculation = findViewById(R.id.textCalculation);
+        calculation.setText(calculation.getText()+"sqrt");
     }
 
     public void calculate(View view) {
