@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import net.objecthunter.exp4j.Expression;
@@ -20,10 +20,34 @@ public class MainActivity extends AppCompatActivity {
         TextView calculation = findViewById(R.id.textCalculation);
     }
 
+    //Kontextmenu
     @Override
     public boolean onCreateOptionsMenu (Menu menu){
         getMenuInflater().inflate(R.menu.more_operations, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+        TextView calculation = findViewById(R.id.textCalculation);
+        switch (menuItem.getItemId()){
+            case R.id.sinus:
+                calculation.setText(calculation.getText()+"sin");
+                return true;
+            case R.id.cosinus:
+                calculation.setText(calculation.getText()+"cos");
+                return true;
+            case R.id.tangent:
+                calculation.setText(calculation.getText()+"tan");
+                return true;
+            case R.id.squareroot:
+                calculation.setText(calculation.getText()+"sqrt");
+                return true;
+            default:
+                return super.onOptionsItemSelected(menuItem);
+
+
+        }
     }
 
     public void onClickBtn0(View view) {
@@ -36,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         TextView calculation = findViewById(R.id.textCalculation);
         calculation.setText(calculation.getText()+"1");
         calculate(view);
+
     }
 
     public void onClickBtn2(View view) {
@@ -147,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             double result = e.evaluate();
             String resultString = Double.toString(result);
+            //Test, ob Ergebnis ganze Zahl ist
             if(resultString.split("\\.")[1].equals("0")){
                 solution.setText(resultString.split("\\.")[0]);
             } else {

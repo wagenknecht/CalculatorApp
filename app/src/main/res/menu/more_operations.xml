@@ -10,7 +10,7 @@
             <item android:id="@+id/cosinus"
                 android:title="Kosinus">
             </item>
-            <item android:id="@+id/tangens"
+            <item android:id="@+id/tangent"
                 android:title="Tangens">
             </item>
             <item android:id="@+id/squareroot"
