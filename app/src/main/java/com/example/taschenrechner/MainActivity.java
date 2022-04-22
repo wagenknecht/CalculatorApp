@@ -1,5 +1,6 @@
 package com.example.taschenrechner;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -13,18 +14,45 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String CALCULATION_KEY = "calculationKey";
+    public static final String SOLUTION_KEY = "solutionKey";
+
+    private String calculationString = "";
+    private String solutionString = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView calculation = findViewById(R.id.textCalculation);
     }
 
     //Kontextmenu
     @Override
     public boolean onCreateOptionsMenu (Menu menu){
         getMenuInflater().inflate(R.menu.more_operations, menu);
+        TextView calculation = findViewById(R.id.textCalculation);
+        calculation.setText(calculationString);
+        TextView solution = findViewById(R.id.textSolution);
+        solution.setText(solutionString);
         return true;
+    }
+
+    //Speichern der Werte
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        TextView calculation = findViewById(R.id.textCalculation);
+        TextView solution = findViewById(R.id.textSolution);
+        outState.putString(CALCULATION_KEY, calculation.getText().toString());
+        outState.putString(SOLUTION_KEY, solution.getText().toString());
+        super.onSaveInstanceState(outState);
+    }
+
+    //Wiederherstellen der Daten beim Wechsel der View
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        this.calculationString = savedInstanceState.getString(CALCULATION_KEY);
+        this.solutionString = savedInstanceState.getString(SOLUTION_KEY);
     }
 
     @Override
