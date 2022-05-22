@@ -51,7 +51,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtnCE"
                 android:text="CE"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
             <Button
                 android:id="@+id/buttonC"
@@ -60,7 +60,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtnC"
                 android:text="C"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
         </TableRow>
 
         <TableRow
@@ -75,7 +75,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtnSinus"
                 android:text="sin"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
             <Button
                 android:id="@+id/buttonCosinus"
@@ -84,7 +84,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtnCosinus"
                 android:text="cos"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
             <Button
                 android:id="@+id/buttonTangent"
@@ -93,7 +93,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtnTangent"
                 android:text="tan"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
             <Button
                 android:id="@+id/squareroot"
@@ -102,7 +102,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtnSquareroot"
                 android:text="√"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
         </TableRow>
 
         <TableRow
@@ -117,7 +117,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtn7"
                 android:text="7"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
             <Button
                 android:id="@+id/button8"
@@ -126,7 +126,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtn8"
                 android:text="8"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
             <Button
                 android:id="@+id/button9"
@@ -135,7 +135,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtn9"
                 android:text="9"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
             <Button
                 android:id="@+id/buttonPlus"
@@ -144,7 +144,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtnPlus"
                 android:text="+"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
         </TableRow>
 
         <TableRow
@@ -177,7 +177,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtn6"
                 android:text="6"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
             <Button
                 android:id="@+id/buttonMinus"
@@ -186,7 +186,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtnMinus"
                 android:text="-"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
 
         </TableRow>
@@ -203,7 +203,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtn1"
                 android:text="1"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
 
             <Button
@@ -213,7 +213,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtn2"
                 android:text="2"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
 
             <Button
@@ -223,7 +223,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtn3"
                 android:text="3"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
             <Button
                 android:id="@+id/buttonMultiply"
@@ -232,7 +232,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtnMultiply"
                 android:text="×"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
         </TableRow>
 
@@ -248,7 +248,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtn0"
                 android:text="0"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
             <Button
                 android:id="@+id/buttonSolve"
@@ -257,7 +257,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtnSolve"
                 android:text="="
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
 
             <Button
                 android:id="@+id/buttonComma"
@@ -275,7 +275,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtnDivide"
                 android:text="÷"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button" />
         </TableRow>
     </TableLayout>
 

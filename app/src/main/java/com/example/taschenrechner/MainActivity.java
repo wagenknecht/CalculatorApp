@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Kontextmenu
     @Override
-    public boolean onCreateOptionsMenu (Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.more_operations, menu);
         TextView calculation = findViewById(R.id.textCalculation);
         calculation.setText(calculationString);
@@ -56,20 +56,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem menuItem){
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
         TextView calculation = findViewById(R.id.textCalculation);
-        switch (menuItem.getItemId()){
+        switch (menuItem.getItemId()) {
             case R.id.sinus:
-                calculation.setText(calculation.getText()+"sin");
+                calculation.setText(calculation.getText() + "sin");
                 return true;
             case R.id.cosinus:
-                calculation.setText(calculation.getText()+"cos");
+                calculation.setText(calculation.getText() + "cos");
                 return true;
             case R.id.tangent:
-                calculation.setText(calculation.getText()+"tan");
+                calculation.setText(calculation.getText() + "tan");
                 return true;
             case R.id.squareroot:
-                calculation.setText(calculation.getText()+"sqrt");
+                calculation.setText(calculation.getText() + "sqrt");
                 return true;
             default:
                 return super.onOptionsItemSelected(menuItem);
@@ -78,94 +78,94 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickBtn0(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"0");
+        calculation.setText(calculation.getText() + "0");
         calculate(view);
     }
 
     public void onClickBtn1(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"1");
+        calculation.setText(calculation.getText() + "1");
         calculate(view);
     }
 
     public void onClickBtn2(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"2");
+        calculation.setText(calculation.getText() + "2");
         calculate(view);
     }
 
     public void onClickBtn3(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"3");
+        calculation.setText(calculation.getText() + "3");
         calculate(view);
     }
 
     public void onClickBtn4(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"4");
+        calculation.setText(calculation.getText() + "4");
         calculate(view);
     }
 
     public void onClickBtn5(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"5");
+        calculation.setText(calculation.getText() + "5");
         calculate(view);
     }
 
     public void onClickBtn6(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"6");
+        calculation.setText(calculation.getText() + "6");
         calculate(view);
     }
 
     public void onClickBtn7(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"7");
+        calculation.setText(calculation.getText() + "7");
         calculate(view);
     }
 
     public void onClickBtn8(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"8");
+        calculation.setText(calculation.getText() + "8");
         calculate(view);
     }
 
     public void onClickBtn9(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"9");
+        calculation.setText(calculation.getText() + "9");
         calculate(view);
     }
 
     public void onClickBtnPlus(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"+");
+        calculation.setText(calculation.getText() + "+");
     }
 
     public void onClickBtnMinus(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"-");
+        calculation.setText(calculation.getText() + "-");
     }
 
     public void onClickBtnMultiply(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"*");
+        calculation.setText(calculation.getText() + "*");
     }
 
     public void onClickBtnDivide(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"/");
+        calculation.setText(calculation.getText() + "/");
     }
 
     public void onClickBtnComma(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+".");
+        calculation.setText(calculation.getText() + ".");
     }
 
     public void onClickBtnSolve(View view) {
         TextView solution = findViewById(R.id.textSolution);
         TextView calculation = findViewById(R.id.textCalculation);
         //Verhindert, dass Error-Message in Calculation landet
-        if(solution.getText().toString().equals("Error")) {
+        if (solution.getText().toString().equals("Error")) {
             calculation.setText("");
         } else {
             calculation.setText(solution.getText());
@@ -176,15 +176,15 @@ public class MainActivity extends AppCompatActivity {
     public void onClickBtnCE(View view) {
         TextView solution = findViewById(R.id.textSolution);
         TextView calculation = findViewById(R.id.textCalculation);
-        if(calculation.length() < 1){
-           solution.setText("");
+        if (calculation.length() < 1) {
+            solution.setText("");
         } else {
-           calculation.setText(calculation.getText().toString().substring(0, calculation.length() - 1));
-           if(calculation.length() > 0){
-               calculate(view);
-           } else {
-              solution.setText("");
-           }
+            calculation.setText(calculation.getText().toString().substring(0, calculation.length() - 1));
+            if (calculation.length() > 0) {
+                calculate(view);
+            } else {
+                solution.setText("");
+            }
         }
     }
 
@@ -197,22 +197,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickBtnSinus(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"sin");
+        calculation.setText(calculation.getText() + "sin");
     }
 
     public void onClickBtnCosinus(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"cos");
+        calculation.setText(calculation.getText() + "cos");
     }
 
     public void onClickBtnTangent(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"tan");
+        calculation.setText(calculation.getText() + "tan");
     }
 
     public void onClickBtnSquareroot(View view) {
         TextView calculation = findViewById(R.id.textCalculation);
-        calculation.setText(calculation.getText()+"sqrt");
+        calculation.setText(calculation.getText() + "sqrt");
     }
 
     public void calculate(View view) {
@@ -223,12 +223,14 @@ public class MainActivity extends AppCompatActivity {
             double result = e.evaluate();
             String resultString = Double.toString(result);
             //Test, ob Ergebnis ganze Zahl ist
-            if(resultString.split("\\.")[1].equals("0")){
+            if (resultString.split("\\.")[1].equals("0")) {
                 solution.setText(resultString.split("\\.")[0]);
             } else {
                 solution.setText(resultString);
             }
-        } catch (Exception ae){solution.setText("Error");}
+        } catch (Exception ae) {
+            solution.setText("Error");
+        }
     }
 
 }
